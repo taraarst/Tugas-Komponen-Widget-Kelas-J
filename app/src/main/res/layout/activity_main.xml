@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:text="Nama Siswa : "
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtNama"
+        android:layout_marginTop="24dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="24dp"
+        android:textColor="@color/purple_200"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginLeft="24dp" />
+
+    <TextView
+        android:text="Jurusan : "
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtJurusan"
+        app:layout_constraintTop_toBottomOf="@id/txtNama"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="32dp"
+        android:textColor="@color/purple_200"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginLeft="24dp" />
+
+    <TextView
+        android:text="Kelas : "
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtKelas"
+        app:layout_constraintTop_toBottomOf="@id/txtJurusan"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:textColor="@color/purple_200"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginLeft="24dp" />
+
+    <TextView
+        android:text="Mapel Pilihan : "
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtMapel"
+        app:layout_constraintTop_toBottomOf="@id/txtKelas"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="190dp"
+        android:textColor="@color/purple_200"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginLeft="24dp" />
+
+    <EditText
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/editNama"
+        android:layout_marginTop="24dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@id/txtNama"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="24dp" />
+
+    <RadioGroup
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/editNama"
+        app:layout_constraintStart_toEndOf="@id/txtJurusan"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="24dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="8dp"
+        android:orientation="horizontal"
+        android:id="@+id/radioGroup"
+        android:layout_marginRight="24dp"
+        android:layout_marginLeft="8dp">
+
+        <RadioButton
+            android:text="IPA"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/purple_200"
+            android:id="@+id/rbIpa"
+            android:layout_weight="1"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:buttonTint="@color/purple_200"/>
+
+        <RadioButton
+            android:text="IPS"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/purple_200"
+            android:id="@+id/rbIps"
+            android:layout_weight="1"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:buttonTint="@color/purple_200"/>
+    </RadioGroup>
+
+    <CheckBox
+        android:text="1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textColor="@color/purple_200"
+        android:id="@+id/cbSatu"
+        app:layout_constraintStart_toEndOf="@id/txtKelas"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintTop_toBottomOf="@id/radioGroup"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="24dp"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:buttonTint="@color/purple_200"/>
+
+    <CheckBox
+        android:text="2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textColor="@color/purple_200"
+        android:id="@+id/cbDua"
+        app:layout_constraintStart_toEndOf="@id/txtKelas"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintTop_toBottomOf="@id/cbSatu"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="24dp"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:buttonTint="@color/purple_200"/>
+
+    <CheckBox
+        android:text="3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textColor="@color/purple_200"
+        android:id="@+id/cbTiga"
+        app:layout_constraintStart_toEndOf="@id/txtKelas"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintTop_toBottomOf="@id/cbDua"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="24dp"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:buttonTint="@color/purple_200"/>
+
+    <CheckBox
+        android:text="4"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textColor="@color/purple_200"
+        android:id="@+id/cbEmpat"
+        app:layout_constraintStart_toEndOf="@id/txtKelas"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintTop_toBottomOf="@id/cbTiga"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="24dp"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:buttonTint="@color/purple_200"/>
+
+    <CheckBox
+        android:text="Biologi"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textColor="@color/purple_200"
+        android:id="@+id/cbBiologi"
+        app:layout_constraintStart_toEndOf="@id/txtMapel"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintTop_toBottomOf="@id/cbEmpat"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="24dp"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:buttonTint="@color/purple_200"/>
+
+    <CheckBox
+        android:text="Fisika"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textColor="@color/purple_200"
+        android:id="@+id/cbFisika"
+        app:layout_constraintStart_toEndOf="@id/txtMapel"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintTop_toBottomOf="@id/cbBiologi"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="24dp"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:buttonTint="@color/purple_200"/>
+
+    <CheckBox
+        android:text="Sosiologi"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textColor="@color/purple_200"
+        android:id="@+id/cbSosiologi"
+        app:layout_constraintStart_toEndOf="@id/txtMapel"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintTop_toBottomOf="@id/cbFisika"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="24dp"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:buttonTint="@color/purple_200"/>
+
+
+    <CheckBox
+        android:text="Geografi"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textColor="@color/purple_200"
+        android:id="@+id/cbGeografi"
+        app:layout_constraintStart_toEndOf="@id/txtMapel"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintTop_toBottomOf="@id/cbSosiologi"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="24dp"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:buttonTint="@color/purple_200"/>
+
+
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@android:drawable/ic_delete"
+        android:id="@+id/imgButtonCancel"
+        android:layout_marginTop="30dp"
+        app:layout_constraintTop_toBottomOf="@id/cbGeografi"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="25dp"
+        android:layout_marginRight="25dp" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@android:drawable/ic_input_add"
+        android:id="@+id/imgButtonAdd"
+        android:layout_marginTop="30dp"
+        app:layout_constraintEnd_toStartOf="@id/imgButtonCancel"
+        app:layout_constraintTop_toBottomOf="@id/cbGeografi"
+        android:layout_marginEnd="25dp"
+        android:layout_marginRight="25dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
